@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matteo Bertoni</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #050505;
+    color: white;
+}
+
+/* SCENA */
+.scene {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* MAC SINISTRA */
+.mac {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 380px;
+    opacity: 0.9;
+}
+
+/* OGGETTI DESTRA */
+.objects {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.objects img {
+    width: 70px;
+    opacity: 0.85;
+}
+
+/* CONTENUTO */
+.hero, .section {
+    position: relative;
+    z-index: 2;
+}
+
+/* HERO */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.green {
+    color: #22c55e;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: #22c55e;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-top: 25px;
+    border: 3px solid #22c55e;
+}
+
+/* SEZIONI */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.stat {
+    font-size: 30px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+    .mac {
+        width: 180px;
+        opacity: 0.4;
+    }
+
+    .objects img {
+        width: 40px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SCENA -->
+<div class="scene">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="mac">
+
+    <div class="objects">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png">
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Trasformo lead in <span class="green">clienti paganti</span></h1>
+        <p>Consulente commerciale, closer e supporto marketing</p>
+
+        <a href="mailto:bertonimatteo3@gmail.com" class="btn">Contattami</a>
+
+        <img src="foto.png" class="profile">
+    </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="section">
+    <h2 class="green">Come ti posso aiutare</h2>
+
+    <div class="grid grid-3">
+        <div class="card">
+            <h3>Closing</h3>
+            <p>Conversione lead in clienti</p>
+        </div>
+
+        <div class="card">
+            <h3>Consulenza</h3>
+            <p>Strategia commerciale</p>
+        </div>
+
+        <div class="card">
+            <h3>Marketing & Copy</h3>
+            <p>Supporto contenuti</p>
+        </div>
+    </div>
+</section>
+
+<!-- NUMERI -->
+<section class="section">
+    <h2 class="green">Numeri</h2>
+
+    <div class="grid grid-3">
+        <div class="card">
+            <div class="stat">45%</div>
+            <p>Clienti ricorrenti</p>
+        </div>
+
+        <div class="card">
+            <div class="stat">+20%</div>
+            <p>ROI campagne</p>
+        </div>
+
+        <div class="card">
+            <div class="stat">100+</div>
+            <p>Clienti sviluppati</p>
+        </div>
+    </div>
+</section>
+
+<!-- METODO -->
+<section class="section">
+    <h2 class="green">Metodo</h2>
+
+    <div class="card">
+        <p>
+        Analizzo il mercato e costruisco strategie per trasformare lead in clienti,
+        migliorando conversioni e fidelizzazione.
+        </p>
+    </div>
+</section>
+
+<!-- COMPETENZE -->
+<section class="section">
+    <h2 class="green">Competenze</h2>
+
+    <div class="card">
+        <p><strong>Commerciale / Closer</strong></p>
+        <p><strong>Gestione Aziendale</strong></p>
+        <p><strong>Social Media & Contenuti</strong></p>
+    </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="section">
+    <h2 class="green">Contatti</h2>
+    <p>Email: bertonimatteo3@gmail.com</p>
+    <p>WhatsApp: 350 579 1061</p>
+</section>
+
+</body>
+</html>
